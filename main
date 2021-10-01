@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner=new Scanner(System.in);
+        System.out.print("Kaç adet sayı gireceksiniz\t: ");
+        int sinir=scanner.nextInt();
+        int enBuyuk=0,enKucuk=0,sayac=0;
+
+        while (sayac<sinir){
+            sayac++;
+            System.out.print(sayac+". Sayıyı giriniz:\t: ");
+            int girilenSayi=scanner.nextInt();
+
+            if (enBuyuk<girilenSayi){
+                enBuyuk=girilenSayi;
+            }else if (enKucuk>girilenSayi){
+                enKucuk=girilenSayi;
+            }
+        }
+        System.out.println("Girilen En büyük sayi\t: "+enBuyuk);
+        System.out.println("Girilen En küçük sayi\t: "+enKucuk);
+    }
+}
